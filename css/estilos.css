@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');  /* Me importe las fuentes */
+
+/* Experimento con custom properties */
+:root {
+    --title-color: #574747;
+    --text-color: #f0f0f0e3;
+    --bg-color-200: #0c0b0b;
+    --bg-color-300: #5e5c5c;
+    --bg-color-500: #b9935a;
+
+    --txt-heading: 'Bebas Neue', sans-serif;
+    --txt-body: 'Roboto', sans-serif;
+}
+
+
+
+
+/* Estoy resetenado los estilos por defecto  que vienen del navegador  y ademas le estoy dando sacando la suma de los px con el border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: var(--txt-heading);
+    color: var(--title-color);
+    font-size: 3rem;
+}
+
+p {
+    font-family: var(--txt-body);
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+/* Hice una barra de navegacion -- La tengo que mejorar -- prodria tener los links al centro y que sea un menu hamburguesa */
+.barra_navegacion {
+    background-color: var(--bg-color-300);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.barra_navegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.barra_navegacion ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 1.25rem;
+}
+
+.barra_navegacion ul li a:hover {
+    color: var(--bg-color-500);
+}
+
+.barra_navegacion img {
+    width: 50px;
+    height: 50px;
+}
+
+
+/*Sección de contenido principal o bienvenida */
+
+.bienvenida {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.bienvenida-texto h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+}
+
+.bienvenida-texto p {
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+.bienvenida img {
+    width: 50%;        
+    height: auto;
+    margin-top: 2.7rem;      
+
+}
+
+
+/*Sección de contenido principal o bienvenida */
+
+
+main h2 {
+    font-family: var(--txt-heading);
+    color: var(--title-color);
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/*Creo que las cards me rompen por el tamaño de las imagenes */
+.card{
+    background-color: var(--bg-color-300);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 2rem;
+    text-align: center;
+    width: 450px;
+    transition: transform 0.3s ease;   
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
