@@ -1,0 +1,20 @@
+Notas para llevar el desarollo de la pagina
+
+Debo probar **object-fit:** cover para que las imágenes que no tienen el mismo tamaño sean igual a las demás.
+  
+  Además la puedo combinar con la propiedad **aspect-ratio:** 1 que me permite controlar como la imagen va a cubrir el área.
+  
+  Podemos hacer con **aspect-ratio** que se vean de forma mas vertical o de forma mas horizontal.
+  
+  Para que sea mas horizontal usamos fracciones ejemplo **aspect-ratio** 16/9
+  
+    Para que sea mas vertical usamos fracciones ejemplo **aspect-ratio** 9/16 o 3/5.
+
+Arrelgos para hacer 24/04
+1 - Debo agregar todas los artículos dentro de un div que se llame contenedor, y además que el titulo de ese contenedor debe estar por fuera de ese div.
+2 - Modificar las cards de los libros de flexbox a Grid
+3 - Modificar el tamaño de las letras con la funcion clamp()
+4- Empezar a usar medidas como porcentajes, viewport, em, rem.
+5 - Adaptar la pagina a Mobile.
+6 - Hacer pagina de Productos
+7 - Agregar footer
