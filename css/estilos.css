@@ -22,21 +22,25 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url(../img/fondo.jpg);
+}
+
 h1 {
     font-family: var(--txt-heading);
-    color: var(--title-color);
-    font-size: 3rem;
+    color: #F4F6F7;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4); /* Sombra para que se lea mejor */
 }
 
 p {
     font-family: var(--txt-body);
-    color: var(--text-color);
+    color: #F4F6F7;
     font-size: 1.2rem;
 }
 
 /* Hice una barra de navegacion -- La tengo que mejorar -- prodria tener los links al centro y que sea un menu hamburguesa */
 .barra_navegacion {
-    background-color: var(--bg-color-300);
+    background-color: #1B2631;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,7 +55,7 @@ p {
 
 .barra_navegacion ul li a {
     text-decoration: none;
-    color: var(--text-color);
+    color: #F4F6F7;
     font-weight: 500;
     transition: color 0.3s ease;
     font-size: 1.25rem;
@@ -83,7 +87,7 @@ p {
 
 .bienvenida-texto p {
     font-size: 1.25rem;
-    color: var(--text-color);
+    color: #F4F6F7;
 }
 
 .bienvenida img {
@@ -99,8 +103,9 @@ p {
 
 main h2 {
     font-family: var(--txt-heading);
-    color: var(--title-color);
-    font-size: 2.5rem;
+    color: #F4F6F7;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    font-size: 3.5rem;
     text-align: center;
     margin: 2rem 0;
 }
@@ -115,16 +120,28 @@ main h2 {
 
 /*Creo que las cards me rompen por el tamaño de las imagenes */
 .card{
-    background-color: var(--bg-color-300);
+    background-color: #FEF9E7;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0,0.4);
     padding: 1rem;
     margin: 2rem;
     text-align: center;
     width: 450px;
-    transition: transform 0.3s ease;   
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
 }
 
+.card p{
+    color: #2C3E50;
+}
+
+
+
+
+footer{
+    background-color: #1B2631;
+    
+}
