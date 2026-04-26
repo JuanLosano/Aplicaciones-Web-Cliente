@@ -39,6 +39,42 @@ p {
 }
 
 /* Hice una barra de navegacion -- La tengo que mejorar -- prodria tener los links al centro y que sea un menu hamburguesa */
+
+.contenedor-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #1B2631;
+}
+
+.contenedor-header ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.contenedor-header ul li a {
+    text-decoration: none;
+    color: #F4F6F7;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 1.25rem;
+}
+
+.contenedor-header ul li a:hover {
+    color: var(--bg-color-500);
+}
+
+.contenedor-header img {
+    width: 50px;
+    height: 50px;
+}
+
+
+/*
+Esto quedo de la primera pagina que se codeo
+
 .barra_navegacion {
     background-color: #1B2631;
     display: flex;
@@ -70,6 +106,8 @@ p {
     height: 50px;
 }
 
+*/
+
 
 /*Sección de contenido principal o bienvenida */
 
@@ -78,6 +116,7 @@ p {
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    padding: 2rem;
 }
 
 .bienvenida-texto h1 {
@@ -112,10 +151,11 @@ main h2 {
 
 
 .catalogo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem,1fr)) ;
+    grid-template-rows: auto ;
     gap: 2rem;
+    padding: 0 2rem 2rem;
 }
 
 /*Creo que las cards me rompen por el tamaño de las imagenes */
@@ -124,9 +164,7 @@ main h2 {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0,0.4);
     padding: 1rem;
-    margin: 2rem;
     text-align: center;
-    width: 450px;
     transition: transform 0.3s ease;
 }
 
@@ -134,12 +172,21 @@ main h2 {
     transform: translateY(-5px);
 }
 
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h2{
+    font-family: var(--txt-body);
+    font-size: 1.5rem;
+    color: #0c0b0b
+}
+
 .card p{
     color: #2C3E50;
 }
-
-
-
 
 footer{
     background-color: #1B2631;
