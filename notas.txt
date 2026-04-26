@@ -17,7 +17,8 @@ Arrelgos para hacer 24/04
 4- Empezar a usar medidas como porcentajes, viewport, em, rem.
 5 - Adaptar la pagina a Mobile.
 6 - Hacer pagina de Productos
-7 - Agregar footer
+7 - Hacer pagina Nosotros
+8 - Agregar footer
 
 
 
@@ -31,4 +32,5 @@ Arrelgos para hacer 24/04
 - Agregue propiedes a la img de las cards
 - Modifique la barra de navegación para que quede centrada con las cards.
 - Modifique la section de bienvenida para que quede centrada con la nav y las cards.
-- 
+- Le di estilo basicos al footer
+
