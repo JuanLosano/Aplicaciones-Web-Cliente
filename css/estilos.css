@@ -222,3 +222,24 @@ footer ul li a {
 footer ul li a:hover {
     color: var(--bg-color-500);
 }
+
+
+/* Pagina Nosotros */
+
+.contenedor_nosotros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.contenedor_nosotros img{
+    width: 50%;        
+    height: auto;
+    border-radius: 4px;
+}
+
+.nosotros_texto p{
+    margin-bottom: 1.5rem
+}
