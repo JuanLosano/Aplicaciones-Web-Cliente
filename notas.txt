@@ -49,4 +49,24 @@ Dudas para la clase 29/04
 
 - Las cards en los botones no estan iguales. Y si los igualo se agrandan.
 - Ver comportamiento de la imagen Nosotros
-- 
+
+
+
+29/04
+- Hice la pagina de producto
+- Hice que linkear la card y llevar a esa pagina.
+
+Falta:
+
+- Usar MediaQuerys para adaptar la paginas.
+- Usar medidas VH
+- Usar clam
+
+Dudas para la clase 29/04
+
+- Las cards en los botones no estan iguales. Y si los igualo se agrandan.
+- Ver comportamiento de la imagen Nosotros
+- Porque rompe la card al achicar en la pagina del producto
+- Ver el footer en pagian nosotros
+- Ver cards nos centradas en la pagina home
+

@@ -243,3 +243,89 @@ footer ul li a:hover {
 .nosotros_texto p{
     margin-bottom: 1.5rem
 }
+
+
+/*Estilos para la página de producto */
+
+.producto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    gap:1rem;
+    border-color: #b9935a;
+    border-style: solid;
+    width: fit-content;
+    max-width: 50rem ;
+    margin: 2rem auto;
+    border: 3px solid #b9935a;
+    border-radius: 10px;
+}
+
+.producto-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.producto-info button {
+    width: fit-content;
+    padding: 0.5rem 2rem;   
+    cursor: pointer;
+}
+
+.separador {
+    border: 0;
+    border-top: 1px solid #b9935a; 
+    width: 75%; 
+    margin: 4rem auto;  
+}
+
+.descripcion_producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 2rem; 
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center; 
+}
+
+.descripcion_producto h2{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0c0b0b;
+}
+
+.especificaciones_producto{
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 2rem; 
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.especificaciones_producto ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 4rem;
+}
+
+.especificaciones_producto h2{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0c0b0b;
+}
+
+.especificaciones_producto ul li{
+    font-size: 1rem;
+    font-family: var(--txt-body);
+}
