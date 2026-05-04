@@ -152,7 +152,7 @@ main h2 {
 
 .catalogo {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(12rem,1fr)) ;
+    grid-template-columns: repeat(auto-fill, minmax(13rem,1fr)) ;
     grid-template-rows: auto ;
     gap: 2rem;
     padding: 0 2rem 2rem;
@@ -329,3 +329,25 @@ display: flex;
     font-size: 1rem;
     font-family: var(--txt-body);
 }
+
+
+@media (max-width: 782px) {
+    .bienvenida {
+        flex-direction: column;
+    }
+
+    .bienvenida img {
+        width: 100%;
+        max-width: 600px; 
+        margin: 0 auto;
+        display: block; 
+    }
+}
+
+@media (max-width: 782px) {
+    .bienvenida-texto h1 {
+        font-size: 3rem; 
+        text-align: center;
+    }
+}
+
