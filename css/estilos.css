@@ -193,7 +193,7 @@ main h2 {
     margin-top: auto;
 }
 
-/* Comienzo del Footer por ahora se agrego un footer basico. Una mejora seria hacer columnas con grid con distintas secciones */
+/* Comienzo del Footer por ahora se agrego un footer basico. Una mejora seria hacer columnas con grid con distintas secciones 
 
 footer ul{
     display: flex;
@@ -224,7 +224,46 @@ footer ul li a:hover {
 }
 
 
+*/
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    justify-items: center;
+    background-color: #1B2631;
+    color: #F4F6F7;
+    padding: 1rem 1rem;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #F4F6F7;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 1.25rem;
+    
+}
+
+footer ul li a:hover {
+    color: var(--bg-color-500);
+}
+
+footer h2 {
+    font-family: var(--txt-heading);
+    color: #F4F6F7;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 /* Pagina Nosotros */
+
+.nosotros {
+    min-height: 85vh;  
+}
 
 .contenedor_nosotros{
     display: flex;
@@ -235,7 +274,8 @@ footer ul li a:hover {
 }
 
 .contenedor_nosotros img{
-    width: 50%;        
+    width: 45%;
+    max-width: 800px;
     height: auto;
     border-radius: 4px;
 }
@@ -292,7 +332,6 @@ footer ul li a:hover {
     padding: 0 2rem; 
     max-width: 850px;
     margin: 0 auto;
-    text-align: center; 
 }
 
 .descripcion_producto h2{
@@ -302,7 +341,7 @@ footer ul li a:hover {
 }
 
 .especificaciones_producto{
-display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
@@ -331,6 +370,10 @@ display: flex;
 }
 
 
+
+
+/* Estilos para hacer la pagina responsive */
+
 @media (max-width: 782px) {
     .bienvenida {
         flex-direction: column;
@@ -351,3 +394,19 @@ display: flex;
     }
 }
 
+@media (max-width: 780px) {
+    .contenedor_nosotros {
+        flex-direction: column;
+    }
+
+        .contenedor_nosotros img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+    .producto {
+        flex-direction: column;
+        max-width: 100%;
+    }
+}

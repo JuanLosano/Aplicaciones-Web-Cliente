@@ -70,3 +70,17 @@ Dudas para la clase 29/04
 - Ver el footer en pagian nosotros
 - Ver cards nos centradas en la pagina home
 
+
+
+04/05
+- Hice responsive las vistas de las distintas paginas
+- Mejore el footer usando Grid
+
+
+Falta:
+
+-Usar clam
+- Mejorar Accesibilidad
+- Mejorar botones
+- Agregar logica de botones con position usando boton de wp
+
