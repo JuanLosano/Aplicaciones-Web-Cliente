@@ -370,7 +370,39 @@ footer h2 {
 }
 
 
+/*Icono whatsapp */
 
+a.contacto:link,
+a.contacto:visited {
+    background-image: url('../img/wp_2.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    aspect-ratio: 1;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+
+a.contacto:hover,
+a :active {
+    background-color: transparent;
+    background-image: url('../img/wp_1.svg');
+    
+    
+}
+
+.sr-only {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    display: block;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
 
 /* Estilos para hacer la pagina responsive */
 
@@ -399,8 +431,15 @@ footer h2 {
         flex-direction: column;
     }
 
-        .contenedor_nosotros img {
+    .contenedor_nosotros img {
         width: 100%;
+    }
+    a.contacto:link,
+    a.contacto:visited {
+        height: 2rem;
+        width: 2rem;
+        bottom: 1rem;
+        right: 1rem;
     }
 }
 
@@ -410,3 +449,4 @@ footer h2 {
         max-width: 100%;
     }
 }
+
