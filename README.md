@@ -18,6 +18,7 @@ La pagina va a tener una index donde tenemos una barra de navegacion, un seccion
 - **Nosotros** (`pages/nosotros.html`): Información sobre la librería.
 
 ## Estructura del proyecto
+```
 libros-stores/
 ├── index.html
 ├── pages/
@@ -26,8 +27,9 @@ libros-stores/
 ├── css/
 │   └── estilos.css
 └── img/
-
+```
 ## Cómo correrlo
 1. Cloná o descargá el repositorio.
 2. Abrí `index.html` en tu navegador.
+<br>
 No requiere instalación ni dependencias.
