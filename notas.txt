@@ -84,3 +84,22 @@ Falta:
 - Mejorar botones
 - Agregar logica de botones con position usando boton de wp
 
+
+
+
+
+
+
+
+
+
+Clase de repaso
+
+1- Poner una funcion minima al contenedor del header
+2- Cambiar footer por logos?
+3- Cambiar de color el texto
+4- Cambiar el gradiente del fondo
+5- line high para el body para el texto
+6- Mejorar readme
+
+https://cssgradient.io/
