@@ -7,9 +7,14 @@
     --bg-color-200: #0c0b0b;
     --bg-color-300: #5e5c5c;
     --bg-color-500: #b9935a;
+    --bg-color-400:#002147;
+    --bg-color-600:#C5A059;
+    --bg-color-800:#FDFDF0;
+
 
     --txt-heading: 'Bebas Neue', sans-serif;
     --txt-body: 'Roboto', sans-serif;
+    
 }
 
 
@@ -39,6 +44,9 @@ p {
 }
 
 /* Hice una barra de navegacion -- La tengo que mejorar -- prodria tener los links al centro y que sea un menu hamburguesa */
+header {
+    background-color: #1B2631;
+}
 
 .contenedor-header{
     display: flex;
@@ -46,6 +54,8 @@ p {
     align-items: center;
     padding: 2rem;
     background-color: #1B2631;
+    width: min(64rem, 100%);
+    margin: 0 auto;
 }
 
 .contenedor-header ul{
@@ -130,10 +140,10 @@ Esto quedo de la primera pagina que se codeo
 }
 
 .bienvenida img {
-    width: 50%;        
+    width: 45%;        
     height: auto;
-    margin-top: 2.7rem;      
-
+    margin-top: 2.7rem;
+    border-radius: 0.5rem;      
 }
 
 
