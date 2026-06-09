@@ -27,6 +27,18 @@
     box-sizing: border-box;
 }
 
+
+.sr-only {
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    top: -4000px;
+    left:-4700px;
+
+}
+
 body{
     background-image: url(../img/fondo.jpg);
 }
@@ -43,9 +55,13 @@ p {
     font-size: 1.2rem;
 }
 
-/* Hice una barra de navegacion -- La tengo que mejorar -- prodria tener los links al centro y que sea un menu hamburguesa */
+
+/* Menu original*/
 header {
     background-color: #1B2631;
+    position: sticky;
+    top: 0;
+    z-index: 998;
 }
 
 .contenedor-header{
@@ -80,6 +96,55 @@ header {
     width: 50px;
     height: 50px;
 }
+
+/* Hice una barra de navegacion -- La tengo que mejorar -- prodria tener los links al centro y que sea un menu hamburguesa */
+
+.menu-btn {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    width: 3rem;
+    aspect-ratio: 1;
+    background-image: url('../img/menu.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 999;
+}
+
+
+/*Con esto logro abrir y cerrar el menu */
+.menu-btn[aria-expanded="true"] {
+    background-image: url('../img/menu_close.svg');
+}
+
+.primary-navigation{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1B2631;
+    width: 23vw;
+    transform: translateX(+100%) translateY(0%);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.primary-navigation[data-visible="true"] {
+    transform: translateX(0%) translateY(0%);
+}
+
+
+.fantasma{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+     z-index: 997;
+}
+
+
 
 
 /*

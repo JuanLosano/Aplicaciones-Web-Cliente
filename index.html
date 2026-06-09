@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/main.js" defer></script>
     <title>Libros Stores</title>
     
 </head>
 <body>
+    
     <header>
         <div class="contenedor-header">
-            <img src="img/libreria.png" alt="Logo de la pagina">
-            <nav class="barra_navegacion">
+                <img src="img/libreria.png" alt="  Logo de la libreria" ">
+            <button class="menu-btn" aria-level="Ingresar al menu principal" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menú principal</span></button>
+            <nav id="primary-navigation" data-visible="false" class="primary-navigation" >
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="./pages/producto.html">Libros</a></li>
+                    <li><a href="./pages/producto.html">Libros</a></li> 
                     <li><a href="./pages/nosotros.html">Nosotros</a></li>
                 </ul>
             </nav>
         </div>
-
     </header>
 
-    <main>
+
+    <main >
 
         <section class="bienvenida">
             <div class="bienvenida-texto">
