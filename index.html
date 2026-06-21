@@ -13,16 +13,51 @@
     
     <header>
         <div class="contenedor-header">
-                <img src="img/libreria.png" alt="  Logo de la libreria" ">
-            <button class="menu-btn" aria-level="Ingresar al menu principal" aria-controls="primary-navigation" aria-expanded="false">
-                <span class="sr-only">Menú principal</span></button>
-            <nav id="primary-navigation" data-visible="false" class="primary-navigation" >
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="./pages/producto.html">Libros</a></li> 
-                    <li><a href="./pages/nosotros.html">Nosotros</a></li>
-                </ul>
-            </nav>
+            <h1>Libros Stores</h1>
+
+            <div class="controles">
+                <button class="fav-btn" aria-label="Agregar a favoritos" aria-controls="primary-fav">
+                    <span class="sr-only">Mis favoritos</span>
+                    <span id="fav-count" class="fav-count">1</span>
+                </button>
+
+                <aside class="mis-favoritos primary-fav" data-visible="false">
+                    <h1>Mis Favoritos <button class="fav-btn-cerrar"><span class="sr-only">Cerrar ventana</span></button> </h1>
+                    <ul class="lista-favoritos">
+                        <li class="item-fav">
+                            <img src="img/rayuela.jpg" alt="Portada del libro rayuela">
+                            <span>Rayuela</span>
+                            <button class="btn-fav-remove" data-id="1"></button>
+                            <span class="sr-only">Eliminar de favoritos</span>
+                        </li>
+                    </ul>
+                </aside>
+
+                <button class="cart-btn" aria-label="Ver carrito" aria-controls="primary-cart" aria-expanded="false">
+                    <span class="sr-only">Mi carrito</span>
+                    <span id="cart-count" class="cart-count"></span>
+                </button>
+
+                <aside class="mi-carrito primary-cart" id="primary-cart" data-visible="false">
+                    <h1>Mi Carrito <button class="cart-btn-cerrar"><span class="sr-only">Cerrar ventana</span></button> </h1>
+                    <ul class="lista-carrito">
+                    </ul>
+                    <h2 class="cart-total total">Total: $17.000</h2>
+                    <button class="checkout">Finalizar Compra</button>
+                </aside>
+
+                <button class="menu-btn" aria-label="Ingresar al menu principal" aria-controls="primary-navigation" aria-expanded="false">
+                    <span class="sr-only">Menu principal</span>
+                </button>
+
+                <nav id="primary-navigation" data-visible="false" class="primary-navigation">
+                    <ul>
+                        <li><a class="primary-link" href="">Home</a></li>
+                        <li><a class="primary-link" href="">Productos</a></li>
+                        <li><a class="primary-link" href="">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -39,57 +74,8 @@
 
         <h2>Nuestro Catálogo</h2>
 
-        <section class="catalogo">   
-
-        <article class="card">
-            <img src="img/anillos.jpg" alt="Imagen del libro del señor de los anillos">
-            <h2>El Señor de los Anillos</h2>
-            <p>Precio: $19.99</p>
-            <button>Añadir al Carrito</button>
-        </article>
-
-        <article class="card">
-            <img src="img/apocalipsis.jpg" alt="Imagen del libro apocalipsis">
-            <h2>Apocalipsis</h2>
-            <p>Precio: $14.99</p>
-            <button>Añadir al Carrito</button>
-        </article>
-
-        <article class="card">
-            <img src="img/dune.jpg" alt="Imagen del libro de dune">
-            <h2>Dune</h2>
-            <p>Precio: $24.99</p>
-            <button>Añadir al Carrito</button>
-        </article>
-
-        <article class="card">
-            <img src="img/it.jpg" alt="Imagen del libro it">
-            <h2>It</h2>
-            <p>Precio: $16.99</p>
-            <button>Añadir al Carrito</button>
-        </article>
-
-        <article class="card">
-            <img src="img/mundo.jpg" alt="Imagen del libro del mundo">
-            <h2>El Mundo</h2>
-            <p>Precio: $29.99</p>
-            <button>Añadir al Carrito</button>
-        </article>
-
-        <article class="card">
-            <img src="img/rayuela.jpg" alt="Imagen del libro de rayuela">
-            <h2>Rayuela</h2>
-            <p>Precio: $24.99</p>
-            <button>Añadir al Carrito</button>
-        </article>
-
-        <article class="card">
-                <img src="img/tunel.jpg" alt="Imagen del libro de el túnel">
-                <h2>El Túnel</h2>
-                <p>Precio: $19.99</p>
-                <button>Añadir al Carrito</button>
-        </article>
-
+    <section>
+        <div class="catalogo"></div>   
     </section>   
 
     </main>

@@ -10,6 +10,12 @@
     --bg-color-400:#002147;
     --bg-color-600:#C5A059;
     --bg-color-800:#FDFDF0;
+    --color-oxford-blue: #002147;
+    --color-brushed-gold: #C5A059;
+    --color-cream-white: #FDFDF0;
+
+
+    --contenedor-sz: min(64rem, 100%);
 
 
     --txt-heading: 'Bebas Neue', sans-serif;
@@ -65,13 +71,21 @@ header {
 }
 
 .contenedor-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-    background-color: #1B2631;
-    width: min(64rem, 100%);
+    width: var(--contenedor-sz);
     margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    background-color: #1B2631;
+}
+
+.contenedor-header .controles{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 .contenedor-header ul{
@@ -112,21 +126,25 @@ header {
     z-index: 999;
 }
 
-
-/*Con esto logro abrir y cerrar el menu */
-.menu-btn[aria-expanded="true"] {
-    background-image: url('../img/menu_close.svg');
-}
-
 .primary-navigation{
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     background-color: #1B2631;
-    width: 23vw;
+    width: 25vw;
     transform: translateX(+100%) translateY(0%);
     transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.primary-navigation ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 
@@ -135,14 +153,321 @@ header {
 }
 
 
-.fantasma{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    left: 0;
-     z-index: 997;
+/* Favoritos*/
+
+.fav-btn{
+    position: relative;
+    background: none;
+    border: none;
+    width: 2rem;
+    aspect-ratio: 1/1;
+    background-image: url(../img/fav_reposo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
+
+.fav-btn:hover {
+    background-image: url(../img/fav_active.svg);
+    cursor: pointer;
+}
+
+.fav-count {
+    position: absolute;
+    font-size: 0.rem;
+    right: -1rem;
+    top: -1rem;
+    width: 1.7rem;
+    aspect-ratio: 1;
+    padding: 0.4rem;
+    background-color: #C5A059;
+    border-radius: 100%;
+    display: none;
+}
+
+.fav-count.active {
+    display: block;
+}
+
+.primary-fav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 75vh;
+    background-color: #1B2631;
+    z-index: 1000;
+    overflow-y: scroll;
+    padding: 1rem;
+    transform: translateX(100%) translateY(0%);
+    transition: all 0.3s ease-in-out;
+}
+
+.primary-fav[data-visible="true"] {
+    transform: translateX(0%) translateY(0%);
+    display: block;
+}
+
+/* Favoritos vista de las cards */
+.mis-favoritos h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.mis-favoritos h1 button {
+    background: none;
+    border: none;
+    width: 2rem;
+    aspect-ratio: 1;
+    background-image: url(../img/menu_close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.mis-favoritos h1 button:hover {
+    background-image: url('../img/close-fill-hover.svg');
+    cursor: pointer;
+}
+
+.mis-favoritos ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.mis-favoritos img {
+    width: 4rem;
+}
+
+.mis-favoritos li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.mis-favoritos li:hover {
+    background-color:#C5A059;
+}
+
+.btn-fav-remove {
+    position: relative;
+    background: none;
+    border: none;
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+    background-image: url('../img/menu_close.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.btn-fav-remove:hover {
+    background-image: url('../img/close-fill-hover.svg');
+    cursor: pointer;
+}
+
+/* Carrito */
+
+.cart-btn {
+    position: relative;
+    background: none;
+    border: none;
+    width: 2rem;
+    aspect-ratio: 1/1;
+    background-image: url(../img/carrito_reposo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.cart-btn:hover {
+    background-image: url(../img/carrito_active.svg);
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    font-size: 0.6rem;
+    right: -1rem;
+    top: -1rem;
+    width: 1.7rem;
+    aspect-ratio: 1;
+    padding: 0.4rem;
+    background-color: var(--accent-color-400);
+    border-radius: 100%;
+    display: none;
+}
+
+.cart-count.active {
+    display: block;
+}
+
+/* Carrito  vista de las cards*/
+.primary-cart {
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 75vw;
+    background-color: #1B2631;
+    z-index: 1000;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    transform: translateX(+100%) translateY(0%);
+    transition: transform 350ms ease-out;
+    position: fixed;
+}
+/* Visible */
+.primary-cart[data-visible="true"] {
+    transform: translateX(0%) translateY(0%);
+}
+
+.mi-carrito h1 {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    display: flex;
+}
+
+.mi-carrito h1 button {
+    border: none;
+    width: 2rem;
+    aspect-ratio: 1;
+    background-image: url('../img/close-fill.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background: none;
+}
+
+.mi-carrito h1 button:hover {
+    cursor: pointer;
+    background-image: url('../img/close-fill-hover.svg');
+}
+
+.mi-carrito ul {
+    flex-direction: column;
+    display: flex;
+}
+
+.mi-carrito img {
+    width: 4rem;
+}
+
+.mi-carrito h2 {
+    color: var(--accent-color-400);
+}
+
+.mi-carrito .total {
+    text-align: right;
+}
+
+.mi-carrito .checkout {
+    border: none;
+    border-radius: 1rem;
+    padding: 0.8rem 1rem;
+    font-family: "Nunito", sans-serif;
+    font-size: 1rem;
+    background-color: var(--accent-color-400);
+}
+
+.mi-carrito .checkout:hover {
+    color: var(--bg-color-200);
+    cursor: pointer;
+    background-color: var(--accent-color-500);
+}
+
+.mi-carrito li {
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-bottom: 0.1rem solid var(--text-color);
+    display: flex;
+}
+
+.mi-carrito li:hover {
+    background-color: var(--bg-color-200);
+}
+
+/* Controles */
+.cart-controles {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.menos,
+.mas,
+.eliminar {
+    border: none;
+    width: 1.5rem;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: none;
+}
+
+.menos {
+    background-image: url('../img/remove-outline.svg');
+}
+
+.menos:hover {
+    background-image: url('../img/remove-fill.svg');
+    cursor: pointer;
+}
+
+.mas {
+    background-image: url('../img/add-outline.svg');
+}
+
+.mas:hover {
+    background-image: url('../img/add-fill.svg');
+    cursor: pointer;
+}
+
+.eliminar {
+    position: absolute;
+    width: 1rem;
+    top: -2.7rem;
+    right: -0.4rem;
+    background-image: url('../img/close-fill.svg');
+}
+
+.eliminar:hover {
+    cursor: pointer;
+    background-image: url('../img/close-fill-hover.svg');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -191,7 +516,7 @@ Esto quedo de la primera pagina que se codeo
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    padding: 2rem;
+    padding: 3rem;
 }
 
 .bienvenida-texto h1 {
@@ -525,3 +850,9 @@ a :active {
     }
 }
 
+@media screen and (min-width:768px) {
+
+.contenedor-header {
+    flex-direction: row;
+}  
+}

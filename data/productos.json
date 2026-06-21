@@ -1,0 +1,44 @@
+[
+ {
+    "titulo": "El Señor de los Anillos",
+    "img": "img/anillos.jpg",
+    "alt": "Imagen del libro del señor de los anillos",
+    "precio": 19.99
+  },
+  {
+    "titulo": "Apocalipsis",
+    "img": "img/apocalipsis.jpg",
+    "alt": "Imagen del libro apocalipsis",
+    "precio": 14.99
+  },
+  {
+    "titulo": "Dune",
+    "img": "img/dune.jpg",
+    "alt": "Imagen del libro de dune",
+    "precio": 24.99
+  },
+  {
+    "titulo": "It",
+    "img": "img/it.jpg",
+    "alt": "Imagen del libro it",
+    "precio": 16.99
+  },
+  {
+    "titulo": "El Mundo",
+    "img": "img/mundo.jpg",
+    "alt": "Imagen del libro del mundo",
+    "precio": 29.99
+  },
+  {
+    "titulo": "Rayuela",
+    "img": "img/rayuela.jpg",
+    "alt": "Imagen del libro de rayuela",
+    "precio": 24.99
+  },
+  {
+    "titulo": "El Túnel",
+    "img": "img/tunel.jpg",
+    "alt": "Imagen del libro de el túnel",
+    "precio": 19.99
+  }
+]
