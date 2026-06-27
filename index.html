@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/menu.js" defer></script>
     <script src="js/main.js" defer></script>
     <title>Libros Stores</title>
     
@@ -18,18 +19,12 @@
             <div class="controles">
                 <button class="fav-btn" aria-label="Agregar a favoritos" aria-controls="primary-fav">
                     <span class="sr-only">Mis favoritos</span>
-                    <span id="fav-count" class="fav-count">1</span>
+                    <span id="fav-count" class="fav-count"></span>
                 </button>
 
                 <aside class="mis-favoritos primary-fav" data-visible="false">
                     <h1>Mis Favoritos <button class="fav-btn-cerrar"><span class="sr-only">Cerrar ventana</span></button> </h1>
                     <ul class="lista-favoritos">
-                        <li class="item-fav">
-                            <img src="img/rayuela.jpg" alt="Portada del libro rayuela">
-                            <span>Rayuela</span>
-                            <button class="btn-fav-remove" data-id="1"></button>
-                            <span class="sr-only">Eliminar de favoritos</span>
-                        </li>
                     </ul>
                 </aside>
 

@@ -339,7 +339,7 @@ header {
     border: none;
     width: 2rem;
     aspect-ratio: 1;
-    background-image: url('../img/close-fill.svg');
+    background-image: url('../img/menu_close.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -348,7 +348,7 @@ header {
 
 .mi-carrito h1 button:hover {
     cursor: pointer;
-    background-image: url('../img/close-fill-hover.svg');
+    background-image: url('../img/menu_close_hover.svg');
 }
 
 .mi-carrito ul {
@@ -560,6 +560,11 @@ main h2 {
 
 /*Creo que las cards me rompen por el tamaño de las imagenes */
 .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1rem;
     background-color: #FEF9E7;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0,0.4);
@@ -589,10 +594,20 @@ main h2 {
     color: #2C3E50;
 }
 
-.card button {
+.btn {
     margin-top: auto;
+    padding: 1rem;
 }
 
+.btn:hover {
+    background-color:#C5A059;
+    cursor: pointer;
+}
+
+.btn.active {
+    background-color:#b9935a;
+    color: #F4F6F7;
+}
 /* Comienzo del Footer por ahora se agrego un footer basico. Una mejora seria hacer columnas con grid con distintas secciones 
 
 footer ul{
