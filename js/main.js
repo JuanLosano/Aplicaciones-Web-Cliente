@@ -28,28 +28,43 @@ const cartTotal = document.querySelector('.cart-total')
 
 
 
-//Cargar los productos desde el JSON
+//Cargar los productos desde API
+const baseID = 'appuYVd304ULbfO2H';
+const path = 'patBjBMOLGWDttOWR.bae50dba1f2ac71649f181dbd10ba3acf5fee96d2849a1664d87b8fc0335f581';
+
 async function cargarProductos() {
     try {
-        const response = await fetch('data/productos.json');
-        productos = await response.json(); // Es similar a parse .
+        const response = await fetch(`https://api.airtable.com/v0/${baseID}/Productos`, {
+            headers: {
+                'Authorization': `Bearer ${path}`
+            }
+        });
+        const data = await response.json();
+
+
+console.log(data);
+console.log(data.records);
+console.log(data.records[0]);
+console.log(data.records[0].fields);
+        productos = data.records.map(r => r.fields);
+
         renderizarCatalogo();
         renderizarFavoritos();
         renderizarCarrito();
     } catch (error) {
-        console.error('Error al cargar los productos:', error);
+        console.error("Error al cargar los productos:", error);
     }
-}
-
+};
 
 //Función para renderizar las cards de los productos
 function renderizarCatalogo() {
+    if(!contenedorCatalogo) return; // Verificar si el contenedor existe antes de continuar
 contenedorCatalogo.innerHTML = ''; // Limpiar el contenedor antes de renderizar
     const catalogo = productos.map( p => {
         const esFavorito = favoritos.includes(p.id);
         const enCarrito = carrito.some(item => item.id === p.id);
         return `
-        <article class="card">
+        <article class="card" data-id="${p.id}">
             <img src="${p.img}" alt="${p.alt}">
             <h2>${p.titulo}</h2>
             <p>Precio: $${p.precio}</p>
@@ -58,6 +73,7 @@ contenedorCatalogo.innerHTML = ''; // Limpiar el contenedor antes de renderizar
             <button class="btn btn-cart ${enCarrito ? 'active' : ''}" data-id="${p.id}">
             ${enCarrito ? 'Agregado' : 'Comprar'}
             </button>
+            <a class="sr-only" href="producto.html?id=${p.id}">Ver más sobre ${p.titulo}</a>
         </article>
         `}).join('');
     contenedorCatalogo.innerHTML = catalogo;
@@ -71,6 +87,17 @@ contenedorCatalogo.innerHTML = ''; // Limpiar el contenedor antes de renderizar
     });
 
 }
+
+if(contenedorCatalogo){
+    contenedorCatalogo.addEventListener('click', (e) => {
+        const article = e.target.closest('article');
+        if (!article) return;
+        if (e.target.closest('.btn')) return;
+
+        window.location.href = `producto.html?id=${article.dataset.id}`;
+    });
+};
+
 
 //Toggle favoritos nos ayuda a cambiar el estado al boton de fav
 function toggleFavorito(e) {
@@ -132,6 +159,7 @@ listaFavoritos.addEventListener('click', (e) => {
 
         renderizarFavoritos();
         renderizarCatalogo();
+        renderizarDetalle();
     }
 });
 
@@ -151,6 +179,7 @@ function agregarAlCarrito(e){
     localStorage.setItem('carrito',JSON.stringify(carrito));
     renderizarCatalogo();
     renderizarCarrito();
+    renderizarDetalle();
 };
 
 //Renderizar carrito
@@ -164,8 +193,15 @@ function renderizarCarrito(){
         `
         cartCount.textContent = 0;
         cartCount.classList.remove('active');
+        cartTotal.innerHTML = 'Total de mi compra: $0';
         return;
     }
+
+    
+    cartCount.classList.add('active');
+    const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+    cartCount.textContent = totalItems;
+
 
     carrito.forEach(item => {
         const prod = productos.find(p => p.id === item.id);
@@ -207,8 +243,6 @@ function renderizarCarrito(){
 
     cartTotal.innerHTML = 'Total de mi compra: ' + ' $' + total.toLocaleString('es-AR');
 
-    cartCount.classList.add('active');
-    cartCount.textContent = carrito.length;
 
     //suma
     listaCarrito.querySelectorAll('.mas').forEach(btn => {
@@ -239,11 +273,76 @@ function eliminardDelCarrito(id) {
     localStorage.setItem('carrito', JSON.stringify(carrito));
     renderizarCatalogo();
     renderizarCarrito();
+     renderizarDetalle();
+}
+
+//Ver detalle
+
+function renderizarDetalle() {
+    const params = new URLSearchParams(window.location.search);
+    const id = Number(params.get("id"));
+
+    const producto = productos.find(p => p.id === id);
+    if (!producto) return;
+
+    const esFavorito = favoritos.includes(producto.id);
+    const enCarrito = carrito.some(item => item.id === producto.id);
+
+    const contenedorDetalle = document.querySelector(".detalle-producto");
+    const descripcionProducto = document.querySelector(".descripcion_producto");
+    const especificacionesProducto = document.querySelector(".especificaciones_producto");
+
+    if (!contenedorDetalle) return;
+
+
+    contenedorDetalle.innerHTML = `
+        <article class="producto detalle-producto">
+        <img src="${producto.img}" alt="${producto.alt}">
+        <div class="producto-info">
+            <h2>${producto.titulo}</h2>
+            <p>Precio: $${producto.precio.toLocaleString("es-AR")}</p>
+
+            <button class="btn btn-cart ${enCarrito ? "active" : ""}" data-id="${producto.id}">
+                ${enCarrito ? "Agregado" : "Comprar"}
+            </button>
+
+            <button class="btn btn-fav ${esFavorito ? "active" : ""}" data-id="${producto.id}">
+                ${esFavorito ? "Quitar de Favoritos" : "Añadir a Favoritos"}
+            </button>
+        </div>
+        </article>
+    `;
+
+    descripcionProducto.innerHTML = `
+        <h2>Descripción del libro ${producto.titulo}</h2>
+        <p>${producto.descripcion}</p>
+    `;
+
+    especificacionesProducto.innerHTML = `
+        <h2>Especificaciones del libro ${producto.titulo}</h2>
+
+        <ul>
+            <li><strong>Autor:</strong> ${producto.autor}</li>
+            <li><strong>Editorial:</strong> ${producto.editorial}</li>
+        </ul>
+    `;
+
+    // Eventos de los botones
+    contenedorDetalle
+        .querySelector(".btn-cart")
+        .addEventListener("click", agregarAlCarrito);
+
+    contenedorDetalle
+        .querySelector(".btn-fav")
+        .addEventListener("click", toggleFavorito);
 }
 
 
 document.addEventListener('DOMContentLoaded', async () => {
     await cargarProductos();
+    if (document.querySelector('.detalle-producto')) {
+        renderizarDetalle();
+    }
 });
 
 

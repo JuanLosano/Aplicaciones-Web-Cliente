@@ -4,24 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <link rel="stylesheet" href="../css/estilosv2.css">
-    <title>Nosotros</title>
-    
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="../js/menu.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <title>Nosotros - Libros Stores</title>
 </head>
 <body>
+    
     <header>
-
         <div class="contenedor-header">
-            <img src="../img/libreria.png" alt="Logo de la pagina">
-            <nav class="barra_navegacion">
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./producto.html">Libros</a></li>
-                    <li><a href="./nosotros.html">Nosotros</a></li>
-                </ul>
-            </nav>
-        </div>
+            <h1>Libros Stores</h1>
 
+            <div class="controles">
+                <button class="fav-btn" aria-label="Agregar a favoritos" aria-controls="primary-fav">
+                    <span class="sr-only">Mis favoritos</span>
+                    <span id="fav-count" class="fav-count"></span>
+                </button>
+
+                <aside class="mis-favoritos primary-fav" data-visible="false">
+                    <h1>Mis Favoritos <button class="fav-btn-cerrar"><span class="sr-only">Cerrar ventana</span></button> </h1>
+                    <ul class="lista-favoritos">
+                    </ul>
+                </aside>
+
+                <button class="cart-btn" aria-label="Ver carrito" aria-controls="primary-cart" aria-expanded="false">
+                    <span class="sr-only">Mi carrito</span>
+                    <span id="cart-count" class="cart-count"></span>
+                </button>
+
+                <aside class="mi-carrito primary-cart" id="primary-cart" data-visible="false">
+                    <h1>Mi Carrito <button class="cart-btn-cerrar"><span class="sr-only">Cerrar ventana</span></button> </h1>
+                    <ul class="lista-carrito">
+                        
+                    </ul>
+                    <h2 class="cart-total total"></h2>
+                    <button class="checkout">Finalizar Compra</button>
+                </aside>
+
+                <button class="menu-btn" aria-label="Ingresar al menu principal" aria-controls="primary-navigation" aria-expanded="false">
+                    <span class="sr-only">Menu principal</span>
+                </button>
+
+                <nav id="primary-navigation" data-visible="false" class="primary-navigation">
+                    <ul>
+                        <li><a class="primary-link" href="index.html">Home</a></li>
+                        <li><a class="primary-link" href="nosotros.html">Nosotros</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <main class="nosotros">
@@ -50,8 +81,7 @@
             <h2>Sobre Nosotros</h2>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="../pages/producto.html">Contacto</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
                 </ul>
         </nav>
 

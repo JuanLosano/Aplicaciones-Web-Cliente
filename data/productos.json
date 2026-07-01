@@ -1,50 +1,72 @@
 [
- {  "id": 1,
+  {
+    "id": 1,
     "titulo": "El Señor de los Anillos",
     "img": "img/anillos.jpg",
-    "alt": "Imagen del libro del señor de los anillos",
-    "precio": 20000
+    "alt": "Imagen del libro El Señor de los Anillos",
+    "precio": 20000,
+    "autor": "J. R. R. Tolkien",
+    "editorial": "Minotauro",
+    "descripcion": "Una de las obras más importantes de la literatura fantástica. Frodo Bolsón emprende un peligroso viaje para destruir el Anillo Único y evitar que el Señor Oscuro Sauron conquiste la Tierra Media. Una historia llena de aventuras, amistad, magia y heroísmo."
   },
   {
     "id": 2,
     "titulo": "Apocalipsis",
     "img": "img/apocalipsis.jpg",
-    "alt": "Imagen del libro apocalipsis",
-    "precio": 14000
+    "alt": "Imagen del libro Apocalipsis",
+    "precio": 14000,
+    "autor": "Stephen King",
+    "editorial": "Plaza & Janés",
+    "descripcion": "Una devastadora pandemia acaba con la mayor parte de la humanidad. Los pocos supervivientes deberán elegir entre seguir a las fuerzas del bien o del mal en una batalla que definirá el futuro del mundo. Una de las novelas más extensas y reconocidas de Stephen King."
   },
   {
     "id": 3,
     "titulo": "Dune",
     "img": "img/dune.jpg",
-    "alt": "Imagen del libro de dune",
-    "precio": 24000
+    "alt": "Imagen del libro Dune",
+    "precio": 24000,
+    "autor": "Frank Herbert",
+    "editorial": "Debolsillo",
+    "descripcion": "Ambientada en el planeta desértico Arrakis, esta novela narra la historia de Paul Atreides, un joven destinado a cambiar el destino del universo. Intrigas políticas, religión, ecología y ciencia ficción se combinan en una obra considerada un clásico del género."
   },
   {
     "id": 4,
     "titulo": "It",
     "img": "img/it.jpg",
-    "alt": "Imagen del libro it",
-    "precio": 16000
+    "alt": "Imagen del libro It",
+    "precio": 16000,
+    "autor": "Stephen King",
+    "editorial": "Debolsillo",
+    "descripcion": "En el pequeño pueblo de Derry, un grupo de amigos enfrenta una misteriosa entidad que adopta la forma de los peores miedos de sus víctimas, especialmente la del payaso Pennywise. Una historia de terror, amistad y valentía que se desarrolla en dos épocas distintas."
   },
   {
     "id": 5,
     "titulo": "El Mundo",
     "img": "img/mundo.jpg",
-    "alt": "Imagen del libro del mundo",
-    "precio": 29000
+    "alt": "Imagen del libro El Mundo",
+    "precio": 29000,
+    "autor": "Juan José Millás",
+    "editorial": "Planeta",
+    "descripcion": "Una novela autobiográfica en la que Juan José Millás reconstruye episodios de su infancia y adolescencia, mezclando recuerdos, imaginación y reflexión para explorar la construcción de la identidad y la forma en que percibimos la realidad."
   },
   {
     "id": 6,
     "titulo": "Rayuela",
     "img": "img/rayuela.jpg",
-    "alt": "Imagen del libro de rayuela",
-    "precio": 24000
+    "alt": "Imagen del libro Rayuela",
+    "precio": 24000,
+    "autor": "Julio Cortázar",
+    "editorial": "Alfaguara",
+    "descripcion": "Una de las novelas más influyentes de la literatura latinoamericana. La historia de Horacio Oliveira invita al lector a recorrer el libro de distintas maneras, rompiendo las estructuras tradicionales de la narrativa y ofreciendo una experiencia única."
   },
   {
     "id": 7,
     "titulo": "El Túnel",
     "img": "img/tunel.jpg",
-    "alt": "Imagen del libro de el túnel",
-    "precio": 14500
+    "alt": "Imagen del libro El Túnel",
+    "precio": 14500,
+    "autor": "Ernesto Sabato",
+    "editorial": "Seix Barral",
+    "descripcion": "Juan Pablo Castel, un pintor obsesionado por una mujer que parece comprender su obra, relata la historia que lo llevó a cometer un crimen. Una novela psicológica que explora la soledad, la obsesión y la incomunicación humana."
   }
 ]
