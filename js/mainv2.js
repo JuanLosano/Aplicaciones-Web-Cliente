@@ -179,18 +179,49 @@ function renderizarCarrito(){
         li.innerHTML= `
             <img src="${prod.img}" alt="Portada del libro ${prod.titulo}">
             <div>
+                <h2>${prod.titulo}</h2>
+                <h3>Precio: $${prod.precio.toLocaleString('es-AR')} x ${item.cantidad} = $${subtotal.toLocaleString('es-AR')}</h3>  
+            </div>
+
+            <div class="cart-controles">
+                <button class="menos" data-id="${item.id}">
+                    <span class="sr-only"> Restar cantidad</span>
+                </button>
+                <span>${item.cantidad}</span>
+                <button class="mas" data-id="${item.id}">
+                    <span class="sr-only"> Sumar cantidad</span>
+                </button> 
+                <button class="eliminar" data-id="${item.id}">
+                    <span class="sr-only"> Eliminar elemento</span>
+                </button>                               
+
+            
+            </div>
+
+
         `;
         listaCarrito.appendChild(li);
     });
 
-    cartTotal.innerHTML = 'Total de mi compra: ' + ' $' + total;
+    cartTotal.innerHTML = 'Total de mi compra: ' + ' $' + total.toLocaleString('es-AR');
 
     cartCount.classList.add('active');
     cartCount.textContent = carrito.length;
 
 
+    //Listener para los botones de control del carrito
+
 };
 
+
+function actualizarCantidad(id, delta) {
+    const item = carrito.find(item => item.id === id);
+    if (item) {
+        item.cantidad = Math.max(1, item.cantidad + delta);
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        renderizarCarrito();
+    };
+}
 
 
 

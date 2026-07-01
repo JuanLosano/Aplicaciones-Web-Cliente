@@ -3,48 +3,48 @@
     "titulo": "El Señor de los Anillos",
     "img": "img/anillos.jpg",
     "alt": "Imagen del libro del señor de los anillos",
-    "precio": 19.99
+    "precio": 20000
   },
   {
     "id": 2,
     "titulo": "Apocalipsis",
     "img": "img/apocalipsis.jpg",
     "alt": "Imagen del libro apocalipsis",
-    "precio": 14.99
+    "precio": 14000
   },
   {
     "id": 3,
     "titulo": "Dune",
     "img": "img/dune.jpg",
     "alt": "Imagen del libro de dune",
-    "precio": 24.99
+    "precio": 24000
   },
   {
     "id": 4,
     "titulo": "It",
     "img": "img/it.jpg",
     "alt": "Imagen del libro it",
-    "precio": 16.99
+    "precio": 16000
   },
   {
     "id": 5,
     "titulo": "El Mundo",
     "img": "img/mundo.jpg",
     "alt": "Imagen del libro del mundo",
-    "precio": 29.99
+    "precio": 29000
   },
   {
     "id": 6,
     "titulo": "Rayuela",
     "img": "img/rayuela.jpg",
     "alt": "Imagen del libro de rayuela",
-    "precio": 24.99
+    "precio": 24000
   },
   {
     "id": 7,
     "titulo": "El Túnel",
     "img": "img/tunel.jpg",
     "alt": "Imagen del libro de el túnel",
-    "precio": 19.99
+    "precio": 14500
   }
 ]
